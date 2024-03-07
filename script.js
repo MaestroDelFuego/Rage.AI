@@ -14,12 +14,9 @@ function getRandomResponse(responses) {
 function getWeatherInfo(userInput) {
     return new Promise(async (resolve, reject) => {
         const lowerInput = toLower(userInput);
-
-        // Check if the user mentioned "weather" and try to extract the city
-        const weatherKeywordIndex = lowerInput.indexOf("weather");
-        if (weatherKeywordIndex !== -1) {
-            const cityStartIndex = weatherKeywordIndex + 7; // Assuming "weather " is 7 characters long
-            const city = userInput.substring(cityStartIndex).trim();
+        if (true) {
+            const cityStartIndex = lowerInput; // Assuming "weather " is 7 characters long
+            const city = userInput.substring(cityStartIndex);
 
             if (city) {
                 const apiUrl = `https://wttr.in/${encodeURIComponent(city)}?format=%C+%t`;
@@ -171,6 +168,9 @@ function generateResponse(userInput) {
             "Create an online marketplace for sharing and renting outdoor gear, encouraging sustainable and affordable access to recreational equipment."
           ];
         return getRandomResponse(ideas);
+    }
+    else if (lowerInput.includes("rage") || lowerInput.includes("rage.ai")) {
+        return "Rage.AI is a cutting-edge, public AI project, committed to transparency and collaboration through its fully open-source nature. The initiative aims to cultivate a formidable artificial intelligence, currently at version 0.1. The project is hosted on GitHub, offering accessibility and encouraging contributions from a diverse community of developers and enthusiasts. You can explore and engage with the codebase at Rage.AI GitHub Repository(https://github.com/MaestroDelFuego/Rage.AI), where innovation and shared expertise converge in the pursuit of pushing the boundaries of AI technology.";
     }
     else {
         // Default response for unrecognized input

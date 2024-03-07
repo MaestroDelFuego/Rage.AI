@@ -64,10 +64,10 @@
         }
 
         #chat-container {
-            width: 400px;
+            width: 900px;
             border: 1px solid #61dafb;
             padding: 10px;
-            height: 300px;
+            height: 700px;
             overflow-y: scroll;
             background-color: #2f353c;
             border-radius: 5px;
@@ -75,7 +75,7 @@
         }
 
         #user-input {
-            width: 350px;
+            width: 850px;
             padding: 5px;
             border: 1px solid #61dafb;
             border-radius: 5px;
@@ -90,16 +90,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        #content {
-            text-align: center;
-            max-width: 800px;
-        }
-        #content p {
-            padding-top: 200px;
-            line-height: 1.6; /* Adjust the line height as needed */
-            font-weight: bold;
-            font-size: larger;
-        }
     </style>
 </head>
 <body>
@@ -110,8 +100,16 @@
         <li><a href="AI.html">AI</a></li>
         <li><a href="https://github.com/MaestroDelFuego/Rage.AI">Github</a></li>
     </div>
-    <div id="content">
-        <p>Rage.AI is a cutting-edge, public AI project, committed to transparency and collaboration through its fully open-source nature. The initiative aims to cultivate a formidable artificial intelligence, currently at version 0.1. The project is hosted on GitHub, offering accessibility and encouraging contributions from a diverse community of developers and enthusiasts. You can explore and engage with the codebase at Rage.AI GitHub Repository, where innovation and shared expertise converge in the pursuit of pushing the boundaries of AI technology.</p>
+    <div id="chat-container"></div>
+    <div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button" onclick="sendMessage()">Send</button>
     </div>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("navbar").querySelector("ul");
+            menu.style.display = menu.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
