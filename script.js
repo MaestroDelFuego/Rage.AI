@@ -170,7 +170,7 @@ function generateResponse(userInput) {
         return getRandomResponse(ideas);
     }
     else if (lowerInput.includes("rage") || lowerInput.includes("rage.ai")) {
-        return "Rage.AI is a cutting-edge, public AI project, committed to transparency and collaboration through its fully open-source nature. The initiative aims to cultivate a formidable artificial intelligence, currently at version 0.1. The project is hosted on GitHub, offering accessibility and encouraging contributions from a diverse community of developers and enthusiasts. You can explore and engage with the codebase at Rage.AI GitHub Repository(https://github.com/MaestroDelFuego/Rage.AI), where innovation and shared expertise converge in the pursuit of pushing the boundaries of AI technology.";
+        return "Rage.AI is a cutting-edge, public AI project, committed to transparency and collaboration through its fully open-source nature. The initiative aims to cultivate a formidable artificial intelligence, currently at version 0.2. The project is hosted on GitHub, offering accessibility and encouraging contributions from a diverse community of developers and enthusiasts. You can explore and engage with the codebase at Rage.AI GitHub Repository(https://github.com/MaestroDelFuego/Rage.AI), where innovation and shared expertise converge in the pursuit of pushing the boundaries of AI technology.";
     }
     else {
         // Default response for unrecognized input
